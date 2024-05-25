@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Needed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video-section {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        nav {
+            position: relative;
+            color: #333 ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            margin: 10px auto ;
+            z-index: 1;
+            border-bottom: 2px solid #000 ;
+        }
+
+        .logo {
+            font-size: 4em;
+            margin-left: 20px;
+            font-weight: 700;
+        }
+
+        .nav-link ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-link ul li {
+            margin: 0 10px;
+        }
+
+        .nav-link ul li a {
+            text-decoration: none;
+            color: #333;
+text-transform: uppercase ;
+font-size: 25px ;
+        }
+
+        .sidebar {
+            display: none;
+font-weight: 800; 
+            font-size: 2em;
+            margin-right:20px;
+        }
+
+.content{
+    width: 80%;
+   text-align: left;
+   padding-left: 20px;
+    padding-top: 50px;
+    color: #42445A;
+    
+}
+
+.content h2 {
+    font-size: 80px ;
+}
+
+.content p{
+    
+    font-size: 40px;
+}
+ 
+ 
+ button{
+     margin-top: 60px;
+     margin-left: 100px ;
+     padding: 20px 30px;
+     border: none;
+     background: seagreen ;
+     font-size: 50px;
+     border-radius: 5px;
+ }
+
+
+        .nav-link ul li a:hover {
+background: seagreen ;
+padding:4px 6px;
+color: #fff ;
+        }
+        
+.mission{
+    width: 90%;
+    margin: auto;
+    padding-top: 80px ;
+    text-align: center ;
+}
+
+.mission h{
+    font-weight:800 ;
+    font-size: 60px ;
+    
+}
+
+
+.mission-content{
+    display: flex;
+    justify-content:space-between ;
+    align-items:center ;
+    text-align: left;
+    margin: 55px 0px ;
+    
+}
+.mission-content p{
+    
+   font-size: 25px ;
+   width: 90%;
+    
+}
+
+
+
+img{
+    width: 100%;
+}
+
+.footer{
+    background: #333 ;
+    color: #fff ;
+
+    bottom: 0px;
+    padding: 20px ;
+    text-align: center;
+    
+}
+.footer p{
+    font-size: 25px ;
+    
+}
+
+
+        @media (max-width: 768px) {
+            .nav-link ul {
+                display: none;
+                flex-direction: column;
+                background-color:#333 ;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 50%;
+                padding: 20px 0;
+                text-align: center;
+                height: 300px;
+                
+            }
+            .nav-link.show ul {
+                display: flex;
+            }
+
+            .sidebar {
+                display: block;
+            }
+                    .nav-link ul li  {
+            padding-top: 6px ;
+        }
+                    .nav-link ul li a {
+            color: #fff ;
+            font-size :15px ;
+            
+        }
+       .mission-content{
+           flex-direction: column;
+           
+       }
+       
+       
+       .content{
+   padding-left: 20px;
+    padding-top: 30px;
+    
+}
+.content h2{
+font-size: 25px;
+
+    
+}
+.content p{
+    
+    font-size :15px;
+    
+}
+
+
+     button{
+     margin-top: 60px;
+     margin-left: 100px ;
+     padding: 10px;
+     border: none;
+     background: seagreen ;
+     font-size: 18px;
+     border-radius: 5px;
+ }
+ 
+         .video-section {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+        }
+        
+                .logo {
+            font-size: 2em;
+            margin-left: 20px;
+            font-weight: 700;
+        }
+        
+        .mission{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px ;
+    text-align: center ;
+}
+
+.mission h{
+    font-weight:800 ;
+    font-size: 25px ;
+    
+}
+.mission-content p{
+    font-size :15px;
+    width: 100%;
+    
+}
+ .mission-content{
+   margin: 0px;  
+     
+ }
+   
+  .footer p{
+     font-size:15px;
+     
+  }
+  .footer{
+      margin-top :30px;
+      padding :2px;
+  }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="video-section">
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="volunteer/volunteer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav>
+            <span class="logo">TechPioneers</span>
+            <div class="navbar">
+            <div class="sidebar" id="sidebar">☰</div>
+            <div class="nav-link" id="nav-link">
+                <ul>
+                    <li><a href="" target="_blank">Our Mission</a></li>
+                    <li><a href="" target="_blank">Contact</a></li>
+                    <li><a href="" target="_blank">Events</a></li>
+                </ul>
+            </div></div>
+        </nav>
+           <div class="content">
+                <h2>Volunteer with Designer's Den</h2>
+                
+           <p>Be a part of Designer's Den 2024 in Minna. Help us foster innovation and empower individuals in the digital age. Mentor aspiring tech leaders and share your expertise. Make a real difference in our community.</p>     
+                
+                <button type="submit">Apply Now</button>
+    </div> 
+        
+    </section>
+    
+
+    <section class="mission ">
+        <h>Our Mission </h>
+        <div class="mission-content">
+        <p>At Designer's Den, we empower individuals through technology. Our innovative program connects passionate volunteers with learners from diverse backgrounds to inspire future tech leaders. By fostering a culture of learning, collaboration, and innovation, we aim to drive positive change and build a brighter, tech-driven future for our community.</p>
+        <img src="volunteer/vol.png" alt="">
+        
+    </section>
+    
+    <section class="footer">
+        <p>All right reserve © Dan 2024</p>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebar').click(function () {
+                $('#nav-link').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
